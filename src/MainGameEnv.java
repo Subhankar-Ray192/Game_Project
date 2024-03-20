@@ -11,7 +11,7 @@ class GameEnv
 	
 	class GameBoard
 	{
-		int priority_list[] = {2,1,2,1,3,1,2,1,2};
+		int priority_list[] = {2, 3, 4, 3, 6, 1, 2, 1, 5};
 		
 		String pieces[];
 			
@@ -169,8 +169,6 @@ class GameEnv
 	{
 		int token;
 		
-		
-		
 		GameAgent(int token)
 		{
 			this.token = token;
@@ -283,7 +281,7 @@ class GameEnv
 	
 }
 
-class TicTacToeGame
+class MainGameEnv
 {
 	public static void main(String args[])
 	{
