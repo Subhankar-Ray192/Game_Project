@@ -77,6 +77,6 @@ class GameAPI
 		
 		//obj.play();
 		
-		//obj.actDebug();
+		obj.actDebug();
 	}
 }
