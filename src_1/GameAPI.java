@@ -75,8 +75,8 @@ class GameAPI
 		GameAPI obj = new GameAPI();
 		obj.testAPI();
 		
-		//obj.play();
+		obj.play();
 		
-		obj.actDebug();
+		//obj.actDebug();
 	}
 }
