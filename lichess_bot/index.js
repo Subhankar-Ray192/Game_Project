@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 console.log("Hello World!");
 
 const https = require('node:https');
@@ -34,10 +35,38 @@ async function listenChallenge(){
   		console.error(e);
 	});
 	req.end()
+=======
+<<<<<<< HEAD
+console.log("Hello World!")
+=======
+console.log("Hello World!");
+
+const BASE_URL = 'https://lichess.org';
+const BOT_TOKEN = 'lip_Ehh4RYcoZ3LLQNF9svTI'
+
+function listenChallenge(){
+	const res = await fetch(`${BASE_URL}/api/stream/event`, {
+		headers: {
+			Authorization: `Bearer ${BOT_TOKEN}`, 
+		},
+	});
+	const reader = res.body.getReader();
+
+	while(true) {
+		const { value, done } = await reader.read();
+		if(done) break;
+		console.log('Received', value);
+	}
+>>>>>>> e4ed95f (Fixed typo & bug in the index.js code)
 }
 
 function init_bot(){
 	listenChallenge();
 }
 
+<<<<<<< HEAD
 init_bot()
+=======
+init_bot()
+>>>>>>> 9be567c (Added GET request to lichess)
+>>>>>>> e4ed95f (Fixed typo & bug in the index.js code)
