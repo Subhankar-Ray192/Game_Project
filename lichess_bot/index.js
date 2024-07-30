@@ -11,6 +11,7 @@ const {
 async function listenChallenge(){
 	
 	const https = require('node:https');
+<<<<<<< HEAD
 
 	const options = {
   		hostname: 'lichess.org',
@@ -58,6 +59,32 @@ function listenChallenge(){
 		console.log('Received', value);
 	}
 >>>>>>> e4ed95f (Fixed typo & bug in the index.js code)
+=======
+
+	const options = {
+  		hostname: 'lichess.org',
+  		port: 443,
+  		path: '/api/stream/event',
+  		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${BOT_TOKEN}`,
+		},
+	};
+
+	const req = https.request(options, (res) => {
+  	console.log('statusCode:', res.statusCode);
+  	console.log('headers:', res.headers);
+
+  	res.on('data', (data) => {
+    		console.log(data);
+  		});
+	});
+
+	req.on('error', (e) => {
+  		console.error(e);
+	});
+	req.end()
+>>>>>>> fbbc401 (Challenger Buffer Accepted)
 }
 
 function init_bot(){
