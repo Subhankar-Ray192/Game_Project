@@ -1,0 +1,11 @@
+{
+  "name": "lichess_bot",
+  "version": "1.0.0",
+  "description": "Lichess-Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
